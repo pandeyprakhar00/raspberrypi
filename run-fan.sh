@@ -12,17 +12,17 @@
 
 # Carry out specific functions when asked to by the system
 case "$1" in
-start)
-echo "Starting run-fan.py"
+  start)
+    echo "Starting run-fan.py"
     /usr/local/bin/run-fan.py &
     ;;
-stop)
-echo "Stopping run-fan.py"
-pkill -f /usr/local/bin/run-fan.py
+  stop)
+    echo "Stopping run-fan.py"
+    pkill -f /usr/local/bin/run-fan.py
     ;;
   *)
-echo "Usage: /etc/init.d/run-fan.sh {start|stop}"
-exit 1
+    echo "Usage: /etc/init.d/run-fan.sh {start|stop}"
+    exit 1
     ;;
 esac
 
